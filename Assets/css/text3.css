@@ -1,0 +1,85 @@
+.yggdrasil {
+    position: absolute;
+    top: 0;
+    left: 10vw;
+    width: 80vw;
+}
+.visualtext {
+    position: absolute;
+    left: -37%;
+    width: 175%;
+}
+.mask {
+    position: absolute;
+    top: 34vw;
+    left: 30vw;
+    width: 40vw;
+    height: 50vw;
+    overflow: hidden;
+}
+.cut {
+    position: relative;
+    overflow: hidden;
+    height: 95vw;
+    width: 100vw;
+}
+body {margin: 0; background-color: #CFCECF;}
+html, body {
+    overscroll-behavior: none;
+}
+.audio {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+h1 {
+    text-align: center;
+}
+.eta1 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 20%;
+    height: 30%;
+    background-color: rgba(0,0,0,0.3);
+    border: 3px solid black;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.eta2 {
+    position: absolute;
+    top: 68%;
+    left: 5%;
+    width: 20%;
+    height: 30%;
+    background-color: rgba(0,0,0,0.3);
+    border: 3px solid black;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.eta3 {
+    position: absolute;
+    top: 20%;
+    left: 73%;
+    width: 20%;
+    height: 30%;
+    background-color: rgba(0,0,0,0.3);
+    border: 3px solid black;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.eta4 {
+    position: absolute;
+    top: 68%;
+    left: 73%;
+    width: 20%;
+    height: 30%;
+    background-color: rgba(0,0,0,0.3);
+    border: 3px solid black;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}

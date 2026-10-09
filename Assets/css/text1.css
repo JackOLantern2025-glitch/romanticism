@@ -1,0 +1,120 @@
+@keyframes startup {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0px);}
+}
+
+body { min-height: 150vh; margin: 0; position: relative; background-color: #111111;}
+html, body {
+    overscroll-behavior: none;   /* kills the bounce / scroll chaining */
+}
+.cut {
+    min-height: 150vh;
+    overflow: hidden;
+    animation-name: startup;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.transparent {
+    opacity: 0%;
+}
+.person {
+    position: absolute;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+}
+.head {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    width: 30%;
+    height: 30%;
+    border-radius: 30px;
+    background-color: grey;
+    border: 2px solid black;
+    z-index: -1;
+}
+.torso {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    clip-path: ellipse(30% 35% at 50% 50%);
+    border: 2px solid black;
+    z-index: -2;
+}
+.peopleholder {
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.red {
+    background-color: red;
+}
+.special {
+    top: calc(50vh - 50px);
+    left: calc(50vw - 50px);
+}
+.brush{position:relative;isolation:isolate;padding:10em 15em;color:#0C1821;letter-spacing:.1em}
+.brush::before {
+    content: "";
+    position: absolute; inset: 0; z-index: -1;
+    background: var(--stroke) center / 100% 100% no-repeat;  /* use the baked image */
+    opacity: .5;
+    transform: rotate(-.6deg);
+    will-change: transform;
+    -webkit-mask-image: linear-gradient(90deg, transparent 6%, #000 16%, #000 84%, transparent 94%);
+    mask-image: linear-gradient(90deg, transparent 6%, #000 16%, #000 84%, transparent 94%);
+}
+.brush p {
+    font-weight: 800;
+}
+.content {
+    position: relative;
+    z-index: 100;
+    margin: 10%;
+}
+.inner {
+    height: 100vh;
+}
+.title {
+    position: absolute;
+    left: 30%;
+    z-index: 100;
+}
+.brush2 {
+    position: relative;
+    isolation: isolate;
+    display: inline-block;
+    padding: .45em 2.6em .4em;
+    color: #111;                 /* pick a colour that contrasts with the ink */
+}
+.brush2 h1 {
+    margin: 0;
+    font-size: 50px;                   /* default h1 margins make the stroke look offset */
+}
+.brush2::before {
+    content: "";
+    position: absolute; inset: 0; z-index: -1;
+    background: var(--stroke) center / 100% 100% no-repeat;
+    opacity: .9;
+    transform: rotate(-.6deg);
+    -webkit-mask-image: linear-gradient(90deg, transparent 6%, #000 16%, #000 84%, transparent 94%);
+            mask-image: linear-gradient(90deg, transparent 6%, #000 16%, #000 84%, transparent 94%);
+}
+audio {
+    position: relative;
+    z-index: 1000;
+}
+.signature {
+    font-family: "Monsieur La Doulaise", cursive;
+    font-size: 60px;
+    font-weight: 800;
+    float: right;
+}

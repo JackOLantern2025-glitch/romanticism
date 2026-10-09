@@ -1,0 +1,32 @@
+html, body {
+    margin: 0;
+    overscroll-behavior: none;
+    overflow: hidden;
+}
+.sublime {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: max(100vw, 171vh)
+}
+.title {
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    border: 1px solid white;
+    color: white;
+    font-size: 70px;
+    font-family: "Imperial Script", cursive;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.text {
+    position: absolute;
+    top: calc(100% - 425px);
+    left: calc(100% - 700px);
+    border: 1px solid white;
+    color: white;
+    width: 650px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+}

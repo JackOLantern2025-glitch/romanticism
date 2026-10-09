@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Imperial+Script&family=UnifrakturMaguntia&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/text1.css">
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <div class="cut" id="cut">
+    <audio controls autoplay>
+        <source src="../audio/crowd.mp3" type="audio/mpeg">
+        Audio doesnt work for you lol
+    </audio>
+    <div class="title">
+        <div class="brush2">
+            <h1>Text #1: Comparative</h1>
+        </div>
+    </div>
+    <div id="person" class="person transparent">
+        <div class="head"></div>
+        <div class="torso"></div>
+    </div>
+    <div class="peopleholder" id="ph">
+        <div class="person special">
+            <div class="head red"></div>
+            <div class="torso red"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="brush">
+            <div class="inner">
+                <p>Society frequently chooses greed and sin over other ideas, and corruption comes out of the values society creates. Through the portrayal of innocence and experience of the children as chimney sweepers, the chimney sweeper illustrates the corruption of church in those times, and how these kids were brainwashed into this life. For instance, throughout the innocence version the idea of soot on them clinging to them is present throughout. This is a metaphor for societies sin as these kids get all of the greed and other sins dumped on them. The audience is invited to reflect how children like these were abused for other peoples sins and how everyone's sins must go somewhere, not just left around. In the experience version, the author talks about "[society] are gone to praise God and his Priest and King", after saying they had done no injury to the chimney sweepers. Blake uses an Anaphora to highlight how society values the "Priest" and "King" - despite the core beliefs of the church saying to value God. This shows how sin causes corruption even to powerful people or people in the church, causing people like the chimney sweeper to suffer. The experience version's rhyming scheme starts with AABB and changes to ABAB later. This references the innocence version and combined with other similarities creates a transition or addressing the innocence version, showing how these kids started innocent and listening to societies values and brainwashed into these jobs. But the experience version addresses that and shows the audience how eventually after the work is done, they are nothing to society, they were lied to and are completely alone, like "a little black thing in the snow", something that doesn't fit and has no purpose. This ultimately illustrates the corruption of the church because of the greed in people like the Priest and King, and how they brainwash vulnerable people full of innocence, until they are experienced and left seemingly empty with "the clothes of death", or societies sin, wrapped around them.</p>
+                <h2 class="signature">-Jackson Jones</h2>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        function gauss(mean = 50, sd = 15) {
+            const u = 1 - Math.random(), v = Math.random();
+            const z = Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
+            return Math.min(100, Math.max(0, mean + z * sd));
+        }
+        const ph = document.getElementById('ph')
+        const constant = 10;
+        const clones = []
+        const person = document.getElementById('person');
+        const maxAmt = Math.ceil(document.documentElement.scrollHeight / constant);
+        const positions = [];
+        for (let i = 0; i < maxAmt; i++) {
+            positions.push({ x: gauss(), y: gauss() - 10 });
+        }
+        function updatePeople() {
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = maxScroll > 0 ? Math.min(1, window.scrollY / maxScroll) : 0;   // 0 at top, 1 at bottom
+            const target = Math.round(positions.length * (1 - progress));
+
+            while (clones.length > target) {
+                clones.pop().remove();
+            }
+            while (clones.length < target) {
+                const { x, y } = positions[clones.length];
+                const clone = person.cloneNode(true);
+                clone.removeAttribute('id');
+                clone.classList.add('clone');
+                clone.style.top = y + "%";
+                clone.style.left = x + "%";
+                clone.classList.remove('transparent')
+                ph.appendChild(clone);
+                clones.push(clone);
+            }
+            ph.style.top = String(scrollY) + 'px';
+        }
+
+        updatePeople();
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => { updatePeople(); ticking = false; });
+                ticking = true;
+            }
+        });
+        function bakeBrush(el, ink = '#050505') {
+            const w = el.offsetWidth, h = el.offsetHeight;
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}">
+            <filter id="b" x="-5%" y="-8%" width="110%" height="116%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.012 0.18" numOctaves="2" seed="7" result="e"/>
+                <feDisplacementMap in="SourceGraphic" in2="e" scale="26" xChannelSelector="R" yChannelSelector="G" result="r"/>
+                <feTurbulence type="fractalNoise" baseFrequency="0.004 0.7" numOctaves="2" seed="21" result="n"/>
+                <feColorMatrix in="n" type="matrix" result="s" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 0 0 -1.6"/>
+                <feComposite in="r" in2="s" operator="in"/>
+            </filter>
+            <rect x="6%" y="6%" width="88%" height="88%" fill="${ink}" filter="url(#b)"/>
+            </svg>`;
+            const img = new Image();
+            img.onload = () => {
+                const c = document.createElement('canvas');
+                c.width = w; c.height = h;
+                c.getContext('2d').drawImage(img, 0, 0);
+                c.toBlob(b => el.style.setProperty('--stroke', `url(${URL.createObjectURL(b)})`));
+            };
+            img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+        }
+        bakeBrush(document.querySelector('.brush'), "#ffffff");
+        bakeBrush(document.querySelector('.brush2'), '#efe9d8');
+    </script>
+</body>

@@ -1,0 +1,63 @@
+body {
+    background-color: #FEFAE0;
+    overflow: hidden;
+}
+.bg1 {
+    position: absolute;
+    top: -56%;
+    left: 4%;
+    transform: rotate(73deg);
+    width: 23%;
+    height: 82%;
+    background-color: #606C38;
+}
+.bg2 {
+    position: absolute;
+    top: -56%;
+    left: 4%;
+    transform: rotate(70deg);
+    width: 20%;
+    height: 80%;
+    background-color: #283618;
+}
+.bg3 {
+    position: absolute;
+    top: -89%;
+    left: 4%;
+    transform: rotate(68deg);
+    width: 40%;
+    height: 150%;
+    background-color: #BC6C25;
+    z-index: -1;
+}
+.bg4 {
+    position: absolute;
+    top: -120%;
+    left: 4%;
+    transform: rotate(71deg);
+    width: 50%;
+    height: 200%;
+    background-color: #DDA15E;
+    z-index: -2;
+}
+.frame {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 60%;
+    height: 80%;
+    border: 1px solid black;
+    background-color: rgba(254, 250, 244, 0.3);
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.title {
+    text-align: center;
+    font-family: cursive;
+}
+.signature {
+    font-family: "Monsieur La Doulaise", cursive;
+    font-size: 60px;
+    font-weight: 800;
+    float: right;
+}

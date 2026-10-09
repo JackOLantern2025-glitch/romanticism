@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Imperial+Script&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/zey4szr.css">
+    <link rel="stylesheet" href="../css/text2.css">
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <div class="animation1">
+    <h1 class="title">Text #2:</h1>
+    <h2 class="subtitle">Infographic for Prometheus</h2>
+    <div class="inverse">
+        <h1>Text #2:</h1>
+        <h2>Infographic for Prometheus</h2>
+    </div>
+    <div class="inverse2">
+        <h1>Text #2:</h1>
+        <h2>Infographic for Prometheus</h2>
+    </div>
+    </div>
+    <div class="animation2">
+    <div class="inverse3">
+        <h1>A silent suffering</h1>
+    </div>
+    <div class="inverse4">
+        <h1>Seen in their sad reality</h1>
+    </div>
+    <div class="inverse5">
+        <h1>The ruling principle of hate</h1>
+    </div>
+    <img class="prometheus1" src="../img/prometheus1.png">
+    <img class="prometheus2" src="../img/prometheus2.png">
+    <img class="prometheus3" src="../img/prometheus3.png">
+    <div class="audio">
+        <audio controls autoplay>
+            <source src="../audio/Subliminal.mp3" type="audio/mpeg">
+            Audio doesnt work for you lol
+        </audio>
+    </div>
+    </div>
+    <div id="mask-container">
+    <div id="cursor" class="cursor-mask"></div>
+    </div>
+    <script>
+    const cursor = document.getElementById('cursor');
+    const container = document.getElementById('mask-container');
+
+    window.addEventListener('mousemove', (e) => {
+        const rect = container.getBoundingClientRect();
+        console.log(rect.left)
+        const x = (e.clientX - rect.left) * (container.offsetWidth / rect.width);
+        const y = (e.clientY - rect.top) * (container.offsetHeight / rect.height);
+
+        cursor.style.left = `${x}px`;
+        cursor.style.top = `${y}px`;
+    });
+  </script>
+</body>

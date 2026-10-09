@@ -1,0 +1,59 @@
+body {
+    background-color: #264653;
+    overflow: hidden;
+}
+.circle1 {
+    position: absolute;
+    top: 60vh;
+    left: -10vw;
+    border-radius: 30vw;
+    width: 30vw;
+    height: 30vw;
+    background-color: #F4A261;
+}
+.circle2 {
+    position: absolute;
+    top: -40vh;
+    left: 70vw;
+    border-radius: 60vw;
+    width: 60vw;
+    height: 60vw;
+    background-color: #F4A261;
+}
+.borderbg {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    border: 2px solid #F4A261;
+}
+.border {
+    position: absolute;
+    top: 11%;
+    left: 11%;
+    width: 78%;
+    height: 78%;
+    background-color: #E76F51;
+    z-index: -1;
+}
+.frame {
+    position: absolute;
+    top: 11%;
+    left: 11%;
+    width: 78%;
+    height: 78%;
+    background-color: #E76F51;
+    opacity: 0.3;
+}
+.title {
+    position: absolute;
+    left: 5%;
+    color: black;
+    z-index: 9999;
+}
+.bibliography {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
