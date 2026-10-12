@@ -5,7 +5,7 @@
 
 body { min-height: 150vh; margin: 0; position: relative; background-color: #111111;}
 html, body {
-    overscroll-behavior: none;   /* kills the bounce / scroll chaining */
+    overscroll-behavior: none;
 }
 .cut {
     min-height: 150vh;
@@ -65,7 +65,7 @@ html, body {
 .brush::before {
     content: "";
     position: absolute; inset: 0; z-index: -1;
-    background: var(--stroke) center / 100% 100% no-repeat;  /* use the baked image */
+    background: var(--stroke) center / 100% 100% no-repeat;
     opacity: .5;
     transform: rotate(-.6deg);
     will-change: transform;
@@ -93,11 +93,11 @@ html, body {
     isolation: isolate;
     display: inline-block;
     padding: .45em 2.6em .4em;
-    color: #111;                 /* pick a colour that contrasts with the ink */
+    color: #111;
 }
 .brush2 h1 {
     margin: 0;
-    font-size: 50px;                   /* default h1 margins make the stroke look offset */
+    font-size: 50px;
 }
 .brush2::before {
     content: "";
