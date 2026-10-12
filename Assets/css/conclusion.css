@@ -1,3 +1,8 @@
+@keyframes startup {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0px);}
+}
+
 body {
     background-color: #FEFAE0;
     overflow: hidden;
@@ -60,4 +65,9 @@ body {
     font-size: 60px;
     font-weight: 800;
     float: right;
+}
+.anim {
+    animation-name: startup;
+    animation-duration: 0.5s;
+    animation-timing-function: forwards;
 }
