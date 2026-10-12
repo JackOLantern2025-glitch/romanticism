@@ -1,3 +1,8 @@
+@keyframes startup {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0px);}
+}
+
 html, body {
     margin: 0;
     overscroll-behavior: none;
@@ -29,4 +34,9 @@ html, body {
     width: 650px;
     background-color: rgba(0,0,0,0.5);
     padding: 10px;
+}
+.anim {
+    animation-name: startup;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
