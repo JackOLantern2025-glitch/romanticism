@@ -178,11 +178,6 @@ body {
     background-position: center;
     background-image: url("../img/bottom_left.png");
 }
-.extrapseudoelements p {
-    font-size: 20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #0a0b0f;
-}
 .extrapseudoelements h1 {
     color: #D99A6C;
 }
@@ -195,15 +190,6 @@ body {
     font-weight: 400;
     z-index: 1001;
     margin: 50px;
-}
-.extrapseudoelements h5 {
-    position: absolute;
-    top: 70px;
-    font-size: 20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #0a0b0f;
-    font-weight: 400;
-    z-index: 1000;
 }
 .textcontrastshape {
     position: absolute;
@@ -329,11 +315,76 @@ html, body {
     left: 63.2%;
     width: 20%;
 }
+.historicalcontext6 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    font-weight: 400;
+    position: absolute;
+    top: 2825px;
+    left: 10%;
+    width: 20%;
+}
+.historicalcontext7 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    font-weight: 400;
+    position: absolute;
+    top: 2825px;
+    left: 36.6%;
+    width: 20%;
+}
+.historicalcontext8 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    font-weight: 400;
+    position: absolute;
+    top: 2825px;
+    left: 63.2%;
+    width: 20%;
+}
 .byron {
     position: absolute;
-    top: 2272px;
+    top: 2252px;
+    left: 15%;
+    width: 10%;
+}
+.blake {
+    position: absolute;
+    top: 2252px;
+    left: 25%;
+    width: 10%;
+}
+.wordsworth {
+    position: absolute;
+    top: 2342px;
+    left: 15%;
+    width: 10%;
+}
+.coleridge {
+    position: absolute;
+    top: 2342px;
+    left: 25%;
+    width: 10%;
+}
+.shelley {
+    position: absolute;
+    top: 2432px;
+    left: 15%;
+    width: 10%;
+}
+.keats { 
+    position: absolute;
+    top: 2432px;
+    left: 25%;
+    width: 10%;
+}
+.blocker {
+    position: absolute;
+    top: 2522px;
     left: 15%;
     width: 20%;
+    background-color: #D99A6C;
+    height: 10%;
 }
 .wquote {
     padding-left: 3%;
